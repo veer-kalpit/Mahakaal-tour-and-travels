@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Doto";
+  src: url("/public/Fonts/Doto.ttf") format("truetype");
+}
+
+.font-Doto {
+  font-family: "Doto", sans-serif;
+}
+
+@font-face {
+  font-family: "Dancing";
+  src: url("/public/Fonts/Dancing.ttf") format("truetype");
+}
+
+.font-Dancing {
+  font-family: "Dancing Script", cursive;
+}

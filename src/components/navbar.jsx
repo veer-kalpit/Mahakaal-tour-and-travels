@@ -1,18 +1,30 @@
 import { useState } from "react";
-import Logo from "../../public/logo.png";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
+import Logo from "../../public/Images/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Hook to navigate programmatically
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const goToContact = () => {
+    navigate("/contact"); // Navigate to the /contact page
+    setMenuOpen(false); // Close the menu after navigating
+  };
+
+  const goToHome = () => {
+    navigate("/"); // Navigate to the homepage
+    setMenuOpen(false); // Close the menu after navigating
   };
 
   return (
     <div className="flex justify-around items-center p-4 text-black">
       {/* Logo Section */}
       <div>
-        <img src={Logo} alt="Logo" className="w-40 h-40" />
+        <img src={Logo} alt="Logo" className="w-40 h-40" onClick={goToHome} />
       </div>
 
       {/* Hamburger Button */}
@@ -30,13 +42,20 @@ const Navbar = () => {
 
       {/* Menu Items */}
       <ul
-        className={`fixed top-44 left-0 w-40 h-[50vh] text-black flex flex-col  justify-center items-center space-y-6 transform ${
+        className={`fixed z-50 top-44 left-0 w-full h-[80vh] bg-white text-black flex flex-col justify-center items-center space-y-6 transform ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300`}
       >
-        <li className="text-xl">Services</li>
-        <li className="text-xl">Contact</li>
-        <li className="text-xl">
+        <li className="text-xl font-Dancing">
+          <button onClick={goToHome}>Home</button>
+        </li>
+        <li className="text-xl font-Dancing">Services</li>
+
+        <li className="text-xl font-Dancing">
+          <button onClick={goToContact}>Contact</button>{" "}
+          {/* Navigate to contact */}
+        </li>
+        <li className="text-xl font-Dancing">
           <button
             onClick={toggleMenu}
             className="text-red-500"
