@@ -8,13 +8,14 @@ const App = () => {
     <Router>
       {" "}
       {/* Wrap your app with Router */}
-      <div className="gap-10">
+      <div>
         <Navbar />
         <Routes>
           {/* Define routes here */}
           <Route path="/" element={<Home />} /> {/* Home page */}
           <Route path="/contact" element={<Contact />} /> {/* Contact page */}
         </Routes>
+        
       </div>
     </Router>
   );

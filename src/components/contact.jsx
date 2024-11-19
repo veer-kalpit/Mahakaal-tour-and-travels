@@ -14,7 +14,7 @@ const Contact = () => {
             {/* Whatsapp */}
             <li>
               <a
-                href="https://wa.me/8815212323"
+                href="https://wa.me/+918815212323"
                 target="_blank"
                 rel="noopener noreferrer"
               >

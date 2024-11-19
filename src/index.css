@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Doto";
-  src: url("/public/Fonts/Doto.ttf") format("truetype");
+  src: url("./assets/Fonts/Doto.ttf") format("truetype");
 }
 
 .font-Doto {
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "Dancing";
-  src: url("/public/Fonts/Dancing.ttf") format("truetype");
+  src: url("./assets/Fonts/Dancing.ttf") format("truetype");
 }
 
 .font-Dancing {

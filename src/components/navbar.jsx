@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
-import Logo from "../../public/Images/logo.png";
+import Logo from "../assets/Images/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="flex justify-around items-center p-4 text-black">
       {/* Logo Section */}
       <div>
-        <img src={Logo} alt="Logo" className="w-40 h-40" onClick={goToHome} />
+        <img src={Logo} alt="Logo" className="w-24 h-24 " onClick={goToHome} />
       </div>
 
       {/* Hamburger Button */}
@@ -33,7 +33,7 @@ const Navbar = () => {
         className="focus:outline-none"
         aria-label="Toggle menu"
       >
-        <div className="space-y-2 self-center">
+        <div className="space-y-1 self-center">
           <span className="block w-8 h-1 bg-black"></span>
           <span className="block w-8 h-1 bg-black"></span>
           <span className="block w-8 h-1 bg-black"></span>

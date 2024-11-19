@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Bus from "../../public/Images/traveller.png";
-import Ertiga from "../../public/Images/ertiga.png";
-import I20 from "../../public/Images/i20.png";
-import Swift from "../../public/Images/Swift.png";
+import Bus from "../assets/Images/traveller.png";
+import Ertiga from "../assets/Images/ertiga.png";
+import I20 from "../assets/Images/i20.png";
+import Swift from "../assets/Images/Swift.png";
 
 const Banner = () => {
   const images = [I20, Ertiga, Bus, Swift]; // Array of images
@@ -17,7 +17,7 @@ const Banner = () => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full overflow-hidden h-[600px]">
+    <div className="relative w-full overflow-hidden h-[100%] justify-center items-center self-center text-center">
       <div className="text-center">
         <h1 className="text-[20px] lg:text-[40px] font-Dancing">
           Creating unforgettable{" "}
@@ -49,6 +49,14 @@ const Banner = () => {
             />
           </div>
         ))}
+      </div>
+      <div className="flex justify-center">
+        <a
+          href="tel:+918815212323"
+          className="h-[70px] w-[150px] rounded-[50px] border-[2px] border-[#cecece] text-center mb-10 p-2 font-Doto font-extrabold flex items-center justify-center self-center"
+        >
+          Book Now
+        </a>
       </div>
     </div>
   );
